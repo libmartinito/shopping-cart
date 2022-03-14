@@ -1,0 +1,13 @@
+.copy-one,
+.copy-two {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 1rem 0;
+  font-size: 1.5rem;
+}
+
+.copy-one {
+  margin-top: 8rem;
+}

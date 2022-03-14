@@ -4,6 +4,7 @@ import "../Styles/Header.css";
 function Header() {
   return (
     <div className="header">
+      <div className="icon" />
       <nav className="main-nav">
         <ul className="main-nav__list">
           <li className="main-nav__item">
@@ -23,7 +24,7 @@ function Header() {
           </li>
         </ul>
       </nav>
-      <div className="cart">Cart</div>
+      <div className="cart">CART</div>
     </div>
   );
 }

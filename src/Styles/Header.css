@@ -3,6 +3,15 @@
   width: 600px;
   align-items: center;
   justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.icon {
+  background-image: url("../Images/mountain.png");
+  background-size: cover;
+  width: 22px;
+  height: 22px;
+  background-color: white;
 }
 
 .main-nav__list {
@@ -15,4 +24,8 @@
 .main-nav__link {
   text-decoration: none;
   color: inherit;
+}
+
+.main-nav__item {
+  font-weight: 700;
 }
