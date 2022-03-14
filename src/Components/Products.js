@@ -3,7 +3,7 @@ import Header from "./Header";
 
 function Products() {
   return (
-    <div>
+    <div className="container">
       <Header />
       <div>Products</div>
     </div>

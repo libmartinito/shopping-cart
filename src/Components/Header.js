@@ -1,4 +1,5 @@
 import React from "react";
+import "../Styles/Header.css";
 
 function Header() {
   return (
@@ -7,17 +8,17 @@ function Header() {
         <ul className="main-nav__list">
           <li className="main-nav__item">
             <a href="/" className="main-nav__link">
-              Home
+              HOME
             </a>
           </li>
           <li className="main-nav__item">
             <a href="/products" className="main-nav__link">
-              Products
+              PRODUCTS
             </a>
           </li>
           <li className="main-nav__item">
             <a href="/about" className="main-nav__link">
-              About
+              ABOUT
             </a>
           </li>
         </ul>

@@ -3,9 +3,9 @@ import Header from "./Header";
 
 function Home() {
   return (
-    <div>
+    <div className="container">
       <Header />
-      <div>App</div>
+      <div className="trial">App</div>
     </div>
   );
 }

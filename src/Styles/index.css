@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+:root {
+  --neutral-50: #fafafa;
+  font-size: 14px;
+  font-family: "M PLUS 1", sans-serif;
+  color: var(--neutral-50);
+  box-sizing: border-box;
+}
+
+.container {
+  background-image: url("../Images/background.png");
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
