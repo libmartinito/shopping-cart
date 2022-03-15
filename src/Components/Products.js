@@ -3,15 +3,53 @@ import { v4 as uuidv4 } from "uuid";
 import Header from "./Header";
 import "../Styles/Products.css";
 
-function ProductCards({ productInfo }) {
+function Product({ clickedProduct, productInfo, amount, handleAmount }) {
+  const imgSrc = productInfo[clickedProduct].img;
+  const imgAlt = imgSrc.substring(18, imgSrc.length - 4);
+  return (
+    <div className="selected">
+      <img src={imgSrc} alt={imgAlt} className="selected__img" />
+      <div className="selected__info">
+        <div className="selected__title">{clickedProduct}</div>
+        <div className="selected__price">
+          {productInfo[clickedProduct].price} PHP
+        </div>
+        <label htmlFor="selected__qty" className="selected__label">
+          Qty
+          <input
+            type="number"
+            id="selected__qty"
+            value={amount}
+            onChange={handleAmount}
+          />
+        </label>
+        <button type="button" className="button">
+          Add to Cart
+        </button>
+        <div className="selected__copy">{productInfo[clickedProduct].copy}</div>
+      </div>
+    </div>
+  );
+}
+
+function ProductCards({ productInfo, handler }) {
   const productInfoKeys = Object.keys(productInfo);
   return (
     <div className="body">
       {productInfoKeys.map((el) => (
-        <div className="product" name={el} key={uuidv4()}>
+        <div
+          className="product"
+          title={el}
+          key={uuidv4()}
+          onClick={handler}
+          aria-hidden="true"
+        >
           <img
             src={productInfo[el].img}
-            alt={productInfo[el].img.substring(18, el.length - 4)}
+            alt={productInfo[el].img.substring(
+              18,
+              productInfo[el].img.length - 4
+            )}
             className="product__image"
           />
           <div className="product__info">
@@ -25,6 +63,9 @@ function ProductCards({ productInfo }) {
 }
 
 function Products() {
+  const [clickedProduct, setClickedProduct] = useState();
+  const [amount, setAmount] = useState(1);
+  const [isProductClicked, setIsProductClicked] = useState(false);
   const [productInfo] = useState({
     "Blue Jacket": {
       img: "./Images/Products/a-blue-jacket.jpg",
@@ -78,10 +119,28 @@ function Products() {
     },
   });
 
+  const handleProductClick = (e) => {
+    setIsProductClicked(true);
+    setClickedProduct(e.currentTarget.title);
+  };
+
+  const handleAmountChange = (e) => {
+    setAmount(e.target.value);
+  };
+
   return (
     <div className="container">
       <Header />
-      <ProductCards productInfo={productInfo} />
+      {isProductClicked ? (
+        <Product
+          clickedProduct={clickedProduct}
+          productInfo={productInfo}
+          amount={amount}
+          handleAmount={handleAmountChange}
+        />
+      ) : (
+        <ProductCards productInfo={productInfo} handler={handleProductClick} />
+      )}
     </div>
   );
 }

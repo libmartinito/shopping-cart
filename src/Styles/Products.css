@@ -26,3 +26,16 @@
   justify-content: space-between;
   color: #311d3a;
 }
+
+.selected {
+  display: flex;
+}
+
+.selected__img {
+  width: 300px;
+  height: 300px;
+}
+
+.selected__info {
+  width: 300px;
+}
