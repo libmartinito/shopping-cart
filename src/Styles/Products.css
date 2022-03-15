@@ -1,0 +1,28 @@
+.body {
+  width: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  background-color: #f4ebe8;
+  border-radius: 0.2rem;
+  padding: 0.2rem;
+  margin: 0.8rem 0;
+  cursor: pointer;
+}
+
+.product__image {
+  width: 180px;
+  height: 180px;
+  border-radius: 0.2rem;
+}
+
+.product__info {
+  display: flex;
+  justify-content: space-between;
+  color: #311d3a;
+}
