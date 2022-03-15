@@ -14,18 +14,20 @@ function Product({ clickedProduct, productInfo, amount, handleAmount }) {
         <div className="selected__price">
           {productInfo[clickedProduct].price} PHP
         </div>
-        <label htmlFor="selected__qty" className="selected__label">
-          Qty
-          <input
-            type="number"
-            id="selected__qty"
-            value={amount}
-            onChange={handleAmount}
-          />
-        </label>
-        <button type="button" className="button">
-          Add to Cart
-        </button>
+        <div className="selected__qty-button-wrapper">
+          <label htmlFor="selected__qty" className="selected__label">
+            Qty
+            <input
+              type="number"
+              id="selected__qty"
+              value={amount}
+              onChange={handleAmount}
+            />
+          </label>
+          <button type="button" className="button">
+            Add to Cart
+          </button>
+        </div>
         <div className="selected__copy">{productInfo[clickedProduct].copy}</div>
       </div>
     </div>
@@ -90,7 +92,7 @@ function Products() {
     Backpack: {
       img: "./Images/Products/a-backpack.jpg",
       price: 6000,
-      copy: "This is a sturgy and reliable companion for storing things. It has space for all the strawberries and/or cassette tapes you may find on your journey.",
+      copy: "This is a sturdy and reliable companion for storing things. It has space for all the strawberries and/or cassette tapes you may find on your journey.",
     },
     "Bottle of Water": {
       img: "./Images/Products/a-bottle-of-water.jpg",
@@ -100,7 +102,7 @@ function Products() {
     "Cassette Player": {
       img: "./Images/Products/a-cassette-player.jpg",
       price: 2000,
-      copy: "This is for playing any cassette tapes you may find for fire jams while dodging death. You may not know what these are because of spotify. You are forgiven. Also, the reception is bad here so this is a good thing to get if you did not download your tunes.",
+      copy: "This is for playing any cassette tapes you may find for fire jams while dodging death. You may not know what these are because of spotify. You are forgiven.",
     },
     Tent: {
       img: "./Images/Products/a-tent.jpg",
