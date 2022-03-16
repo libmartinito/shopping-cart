@@ -3,7 +3,13 @@ import { v4 as uuidv4 } from "uuid";
 import Header from "./Header";
 import "../Styles/Products.css";
 
-function Product({ selectedProducts, productInfo, handleAmount, updateCart }) {
+function Product({
+  selectedProducts,
+  productInfo,
+  handleAmount,
+  updateCart,
+  handleBack,
+}) {
   const product = selectedProducts.clickedProduct;
   const productAmount = selectedProducts.amount;
   const imgSrc = productInfo[product].img;
@@ -12,6 +18,9 @@ function Product({ selectedProducts, productInfo, handleAmount, updateCart }) {
     <div className="selected">
       <img src={imgSrc} alt={imgAlt} className="selected__img" />
       <div className="selected__info">
+        <div className="selected__nav" onClick={handleBack} aria-hidden="true">
+          back to products
+        </div>
         <div className="selected__title">{product}</div>
         <div className="selected__price">{productInfo[product].price} PHP</div>
         <div className="selected__qty-button-wrapper">
@@ -78,6 +87,10 @@ function Products({
     handleClickedProduct(e);
   };
 
+  const handleBack = () => {
+    setIsProductClicked(false);
+  };
+
   return (
     <div className="container">
       <Header />
@@ -86,6 +99,7 @@ function Products({
           selectedProducts={selectedProducts}
           productInfo={productInfo}
           handleAmount={handleAmountChange}
+          handleBack={handleBack}
           updateCart={updateCart}
         />
       ) : (

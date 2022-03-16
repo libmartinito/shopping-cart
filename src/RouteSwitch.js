@@ -11,6 +11,7 @@ function RouteSwitch() {
     amount: 0,
     cartItems: [],
     cartQty: [],
+    cartSubtotal: [],
   });
   const [productInfo] = useState({
     "Blue Jacket": {
@@ -64,18 +65,45 @@ function RouteSwitch() {
       copy: "On your journey, your life may be saved by a bird that screams out the button combination for dashing. This is for feeding the bird as thanks for doing good work.",
     },
   });
-
-  const updateCart = () => {
-    const product = selectedProducts.clickedProduct;
+  const updateItemQty = (name, arr) => {
+    const index = arr.indexOf(name);
     const productAmount = selectedProducts.amount;
     const newSelectedProducts = { ...selectedProducts };
-    const oldCartItems = selectedProducts.cartItems;
-    const newCartItems = oldCartItems.concat(product);
+    const newCartItemQty = newSelectedProducts.cartQty;
+    const curCartItemQty = parseInt(newCartItemQty[index], 10);
+    newCartItemQty[index] = curCartItemQty + parseInt(productAmount, 10);
+    newSelectedProducts.amount = 0;
+    const itemCost = productInfo[name].price;
+    const subtotal = itemCost * parseInt(newCartItemQty[index], 10);
+    newSelectedProducts.cartSubtotal[index] = subtotal;
+    setSelectedProducts(newSelectedProducts);
+  };
+
+  const addToCart = (name, arr) => {
+    const productAmount = selectedProducts.amount;
+    const newSelectedProducts = { ...selectedProducts };
+    const newCartItems = arr.concat(name);
     const oldCartQty = selectedProducts.cartQty;
     const newCartQty = oldCartQty.concat(productAmount);
     newSelectedProducts.cartItems = newCartItems;
     newSelectedProducts.cartQty = newCartQty;
+    newSelectedProducts.amount = 0;
+    const itemCost = productInfo[name].price;
+    const subtotal = itemCost * parseInt(productAmount, 10);
+    const oldCartSubtotal = selectedProducts.cartSubtotal;
+    const newCartSubtotal = oldCartSubtotal.concat(subtotal);
+    newSelectedProducts.cartSubtotal = newCartSubtotal;
     setSelectedProducts(newSelectedProducts);
+  };
+
+  const updateCart = () => {
+    const product = selectedProducts.clickedProduct;
+    const oldCartItems = selectedProducts.cartItems;
+    if (oldCartItems.includes(product)) {
+      updateItemQty(product, oldCartItems);
+    } else {
+      addToCart(product, oldCartItems);
+    }
   };
 
   const handleClickedProduct = (e) => {
