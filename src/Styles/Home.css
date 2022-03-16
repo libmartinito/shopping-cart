@@ -1,13 +1,35 @@
+.home-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 80vh;
+}
+.hero {
+  width: 600px;
+  height: 300px;
+  background-image: url("../Images/summit.png");
+  background-size: cover;
+  color: var(--neutral-50);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  font-weight: 700;
+  box-shadow: 0 4px 6px var(--neutral-600);
+  box-shadow: 0 6px 15px var(--neutral-200);
+  border-radius: 0.2rem;
+}
 .copy-one,
 .copy-two {
   width: 600px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  padding: 1rem 0;
-  font-size: 1.5rem;
+  padding: 0.5rem 0;
+  font-size: 0.8rem;
+  color: var(--neutral-700);
 }
 
 .copy-one {
-  margin-top: 8rem;
+  margin-top: 1rem;
 }

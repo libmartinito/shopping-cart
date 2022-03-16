@@ -9,11 +9,14 @@
   --neutral-50: #fafafa;
   --neutral-200: #e5e5e5;
   --neutral-400: #a1a1aa;
+  --neutral-600: #52525b;
   --neutral-700: #404040;
   font-size: 16px;
   font-family: "Lora", serif;
   color: var(--neutral-700);
   box-sizing: border-box;
+  line-height: 1.15;
+  letter-spacing: 0.5px;
 }
 
 .container {

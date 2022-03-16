@@ -6,7 +6,10 @@ function Home() {
   return (
     <div className="container">
       <Header />
-      <div className="body">
+      <div className="home-body">
+        <div className="hero">
+          <p className="hero__copy">Welcome to Celeste</p>
+        </div>
         <div className="copy-one">
           <p>There may come a time</p>
           <p>where you feel the need to face something</p>
@@ -14,8 +17,8 @@ function Home() {
           <p>in spite of all rational thoughts you think to yourself.</p>
         </div>
         <div className="copy-two">
-          <p>If that time is now,</p>
-          <p>we hope that we can help.</p>
+          <p>That time may be now.</p>
+          <p>Let us help.</p>
         </div>
       </div>
     </div>

@@ -10,6 +10,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  color: var(--neutral-400);
 }
 
 .icon {
@@ -33,4 +34,8 @@
 
 .main-nav__item {
   font-weight: 700;
+}
+
+.main-nav__link:hover {
+  color: var(--neutral-700);
 }
