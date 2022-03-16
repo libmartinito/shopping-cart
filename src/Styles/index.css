@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -7,17 +7,19 @@
 
 :root {
   --neutral-50: #fafafa;
-  font-size: 14px;
-  font-family: "M PLUS 1", sans-serif;
-  color: var(--neutral-50);
+  --neutral-200: #e5e5e5;
+  --neutral-400: #a1a1aa;
+  --neutral-700: #404040;
+  font-size: 16px;
+  font-family: "Lora", serif;
+  color: var(--neutral-700);
   box-sizing: border-box;
 }
 
 .container {
-  background-image: url("../Images/background.png");
-  background-size: cover;
   min-height: 100vh;
   display: flex;
+  background-color: var(--neutral-50);
   flex-direction: column;
   align-items: center;
 }

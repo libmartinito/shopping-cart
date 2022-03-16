@@ -4,33 +4,30 @@ import { Link } from "react-router-dom";
 
 function Header() {
   return (
-    <div className="header">
-      <div className="icon" />
+    <header className="header">
       <nav className="main-nav">
+        <Link to="/" class="main-nav__link">
+          <div className="icon" />
+        </Link>
         <ul className="main-nav__list">
           <li className="main-nav__item">
-            <Link to="/" className="main-nav__link">
-              HOME
-            </Link>
-          </li>
-          <li className="main-nav__item">
             <Link to="/products" className="main-nav__link">
-              PRODUCTS
+              Products
             </Link>
           </li>
           <li className="main-nav__item">
             <Link to="/about" className="main-nav__link">
-              ABOUT
+              About
+            </Link>
+          </li>
+          <li className="main-nav__item">
+            <Link to="/cart" className="main-nav__link">
+              Cart
             </Link>
           </li>
         </ul>
       </nav>
-      <div className="cart">
-        <Link to="/cart" className="main-nav__link">
-          CART
-        </Link>
-      </div>
-    </div>
+    </header>
   );
 }
 
