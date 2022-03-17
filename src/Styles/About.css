@@ -1,0 +1,39 @@
+.about-body {
+  width: 600px;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+}
+
+.about__avatar {
+  width: 160px;
+  height: 160px;
+  border-radius: 0.2rem;
+  box-shadow: 0 3px 6px var(--neutral-600);
+  box-shadow: 0 8px 18px var(--neutral-200);
+}
+
+.about__part-one {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.about__copy {
+  text-align: end;
+  margin-right: 1rem;
+}
+
+.copy__wrapper {
+  margin-bottom: 2rem;
+}
+
+.about__copy-two {
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.8rem;
+}
+.about__group-pic {
+  width: 600px;
+  border-radius: 0.2rem;
+  box-shadow: 0 3px 6px var(--neutral-600);
+  box-shadow: 0 8px 18px var(--neutral-200);
+}
