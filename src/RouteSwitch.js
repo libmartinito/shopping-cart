@@ -117,6 +117,20 @@ function RouteSwitch() {
     newSelectedProducts.amount = e.target.value;
     setSelectedProducts(newSelectedProducts);
   };
+
+  const increaseAmount = () => {
+    const newSelectedProducts = { ...selectedProducts };
+    newSelectedProducts.amount += 1;
+    setSelectedProducts(newSelectedProducts);
+  };
+
+  const decreaseAmount = () => {
+    if (selectedProducts.amount === 0) return;
+    const newSelectedProducts = { ...selectedProducts };
+    newSelectedProducts.amount -= 1;
+    setSelectedProducts(newSelectedProducts);
+  };
+
   return (
     <BrowserRouter>
       <Routes>
@@ -130,6 +144,8 @@ function RouteSwitch() {
               handleClickedProduct={handleClickedProduct}
               handleAmountChange={handleAmountChange}
               updateCart={updateCart}
+              increase={increaseAmount}
+              decrease={decreaseAmount}
             />
           }
         />

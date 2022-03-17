@@ -1,4 +1,4 @@
-.body {
+.product-body {
   width: 600px;
   display: flex;
   flex-wrap: wrap;
@@ -27,6 +27,7 @@
 }
 
 .product__title {
+  font-size: 0.8rem;
   color: var(--neutral-600);
 }
 
@@ -80,8 +81,8 @@
 }
 
 #selected__qty {
-  width: 4rem;
-  margin-left: 0.5rem;
+  width: 2rem;
+  height: 1.65rem;
   border: none;
   font-family: "Lora", serif;
   font-size: 1rem;
@@ -89,6 +90,13 @@
   text-align: center;
   background-color: var(--neutral-700);
   border-radius: 0.1rem;
+  -moz-appearance: textfield;
+}
+
+#selected__qty::-webkit-outer-spin-button,
+#selected__qty::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .selected__copy {
@@ -108,7 +116,16 @@
   box-shadow: 0 8px 18px var(--neutral-200);
 }
 
+.button--qty {
+  box-shadow: none;
+  padding: none;
+}
+
 .button:active {
   box-shadow: 0 2px 4px var(--neutral-600);
   box-shadow: 0 3px 6px var(--neutral-200);
+}
+
+.button--qty:active {
+  box-shadow: none;
 }

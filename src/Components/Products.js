@@ -9,6 +9,8 @@ function Product({
   handleAmount,
   updateCart,
   handleBack,
+  increase,
+  decrease,
 }) {
   const product = selectedProducts.clickedProduct;
   const productAmount = selectedProducts.amount;
@@ -24,15 +26,28 @@ function Product({
         <div className="selected__title">{product}</div>
         <div className="selected__price">{productInfo[product].price} PHP</div>
         <div className="selected__qty-button-wrapper">
-          <label htmlFor="selected__qty" className="selected__label">
-            Qty
+          <div className="selected__qty">
+            <button
+              type="button"
+              className="button button--qty"
+              onClick={decrease}
+            >
+              -
+            </button>
             <input
               type="number"
               id="selected__qty"
               value={productAmount}
               onChange={handleAmount}
             />
-          </label>
+            <button
+              type="button"
+              className="button button--qty"
+              onClick={increase}
+            >
+              +
+            </button>
+          </div>
           <button type="button" className="button" onClick={updateCart}>
             Add to Cart
           </button>
@@ -46,7 +61,7 @@ function Product({
 function ProductCards({ productInfo, handler }) {
   const productInfoKeys = Object.keys(productInfo);
   return (
-    <div className="body">
+    <div className="product-body">
       {productInfoKeys.map((el) => (
         <div
           className="product"
@@ -79,6 +94,8 @@ function Products({
   handleClickedProduct,
   handleAmountChange,
   updateCart,
+  increase,
+  decrease,
 }) {
   const [isProductClicked, setIsProductClicked] = useState(false);
 
@@ -101,6 +118,8 @@ function Products({
           handleAmount={handleAmountChange}
           handleBack={handleBack}
           updateCart={updateCart}
+          increase={increase}
+          decrease={decrease}
         />
       ) : (
         <ProductCards productInfo={productInfo} handler={handleProductClick} />
