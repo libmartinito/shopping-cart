@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Components/Home";
 import Products from "./Components/Products";
 import About from "./Components/About";
@@ -132,7 +132,7 @@ function RouteSwitch() {
   };
 
   return (
-    <HashRouter>
+    <BrowserRouter basename="/shopping-cart">
       <Routes>
         <Route
           path="/"
@@ -166,7 +166,7 @@ function RouteSwitch() {
           }
         />
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 
