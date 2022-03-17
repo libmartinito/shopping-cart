@@ -7,7 +7,11 @@ function Header({ selectedProducts }) {
     <header className="header">
       <nav className="main-nav">
         <Link to="/" className="main-nav__link">
-          <div className="icon" />
+          <img
+            src="./Images/mountain.png"
+            alt="mountain icon"
+            className="icon"
+          />
         </Link>
         <ul className="main-nav__list">
           <li className="main-nav__item">

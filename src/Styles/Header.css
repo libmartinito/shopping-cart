@@ -14,8 +14,6 @@
 }
 
 .icon {
-  background-image: url("../Images/mountain.png");
-  background-size: cover;
   width: 30px;
   height: 30px;
 }
