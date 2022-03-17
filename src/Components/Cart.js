@@ -6,7 +6,7 @@ import "../Styles/Cart.css";
 function Cart({ selectedProducts, productInfo }) {
   return (
     <div className="container">
-      <Header />
+      <Header selectedProducts={selectedProducts} />
       <div className="addedProducts">
         <div className="addedProducts__titles">
           <div className="addedProducts__title">Item</div>

@@ -2,10 +2,10 @@ import React from "react";
 import Header from "./Header";
 import "../Styles/About.css";
 
-function About() {
+function About({ selectedProducts }) {
   return (
     <div className="container">
-      <Header />
+      <Header selectedProducts={selectedProducts} />
       <div className="about-body">
         <div className="about__part-one">
           <div className="about__copy">

@@ -2,10 +2,10 @@ import React from "react";
 import Header from "./Header";
 import "../Styles/Home.css";
 
-function Home() {
+function Home({ selectedProducts }) {
   return (
     <div className="container">
-      <Header />
+      <Header selectedProducts={selectedProducts} />
       <div className="home-body">
         <div className="hero">
           <p className="hero__copy">Welcome to Celeste</p>

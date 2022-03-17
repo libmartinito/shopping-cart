@@ -134,7 +134,10 @@ function RouteSwitch() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route
+          path="/"
+          element={<Home selectedProducts={selectedProducts} />}
+        />
         <Route
           path="/products"
           element={
@@ -149,7 +152,10 @@ function RouteSwitch() {
             />
           }
         />
-        <Route path="/about" element={<About />} />
+        <Route
+          path="/about"
+          element={<About selectedProducts={selectedProducts} />}
+        />
         <Route
           path="/cart"
           element={

@@ -110,7 +110,7 @@ function Products({
 
   return (
     <div className="container">
-      <Header />
+      <Header selectedProducts={selectedProducts} />
       {isProductClicked ? (
         <Product
           selectedProducts={selectedProducts}
