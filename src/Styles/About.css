@@ -26,14 +26,33 @@
   margin-bottom: 2rem;
 }
 
-.about__copy-two {
-  text-align: center;
-  padding: 1rem 0;
-  font-size: 0.8rem;
-}
 .about__group-pic {
   width: 600px;
   border-radius: 0.2rem;
   box-shadow: 0 3px 6px var(--neutral-600);
   box-shadow: 0 8px 18px var(--neutral-200);
+}
+
+@media screen and (max-width: 500px) {
+  .about-body {
+    width: 90vw;
+  }
+
+  .about__part-one {
+    flex-flow: column-reverse;
+    align-items: flex-end;
+  }
+
+  .about__avatar {
+    margin-bottom: 3rem;
+  }
+
+  .about__copy {
+    font-size: 0.9rem;
+    margin-right: 0;
+  }
+
+  .about__group-pic {
+    width: 90vw;
+  }
 }

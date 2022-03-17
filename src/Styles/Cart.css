@@ -80,3 +80,19 @@
   padding: 2rem 0;
   margin-bottom: 3rem;
 }
+
+@media screen and (max-width: 500px) {
+  .addedProducts {
+    width: 90vw;
+    padding-bottom: 8rem;
+  }
+
+  .addedProduct__item {
+    width: 70px;
+  }
+
+  .addedProduct__title {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+}

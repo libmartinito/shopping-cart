@@ -39,3 +39,19 @@
 .main-nav__link:hover {
   color: var(--neutral-700);
 }
+
+@media screen and (max-width: 500px) {
+  .header {
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    padding: 1rem;
+    background-color: var(--neutral-50);
+  }
+  .main-nav__list {
+    gap: 0.8rem;
+  }
+  .main-nav__link:active {
+    color: var(--neutral-700);
+  }
+}

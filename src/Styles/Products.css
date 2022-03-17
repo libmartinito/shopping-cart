@@ -129,3 +129,32 @@
 .button--qty:active {
   box-shadow: none;
 }
+
+@media screen and (max-width: 500px) {
+  .product-body {
+    width: 90vw;
+    padding-bottom: 8rem;
+  }
+
+  .product {
+    width: 42.5vw;
+  }
+
+  .product__image {
+    width: 42.5vw;
+    height: 42.5vw;
+  }
+
+  .selected {
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 8rem;
+  }
+
+  .selected__img {
+    width: 90vw;
+    height: 90vw;
+  }
+}

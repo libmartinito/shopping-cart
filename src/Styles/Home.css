@@ -33,3 +33,27 @@
 .copy-one {
   margin-top: 1rem;
 }
+
+@media screen and (max-width: 500px) {
+  .home-body {
+    width: 100vw;
+  }
+
+  .home-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero,
+  .copy-one,
+  .copy-two {
+    width: 90vw;
+  }
+
+  .copy-one,
+  .copy-two {
+    font-size: 0.75rem;
+  }
+}
