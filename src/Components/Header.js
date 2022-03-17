@@ -6,7 +6,7 @@ function Header({ selectedProducts }) {
   return (
     <header className="header">
       <nav className="main-nav">
-        <Link to="/" className="main-nav__link">
+        <Link to="/shopping-cart" className="main-nav__link">
           <img
             src="./Images/mountain.png"
             alt="mountain icon"
@@ -15,17 +15,17 @@ function Header({ selectedProducts }) {
         </Link>
         <ul className="main-nav__list">
           <li className="main-nav__item">
-            <Link to="/products" className="main-nav__link">
+            <Link to="/shopping-cart/products" className="main-nav__link">
               Products
             </Link>
           </li>
           <li className="main-nav__item">
-            <Link to="/about" className="main-nav__link">
+            <Link to="/shopping-cart/about" className="main-nav__link">
               About
             </Link>
           </li>
           <li className="main-nav__item">
-            <Link to="/cart" className="main-nav__link">
+            <Link to="/shopping-cart/cart" className="main-nav__link">
               Cart(
               {selectedProducts.cartQty.reduce(
                 (partialSum, x) => partialSum + x,
