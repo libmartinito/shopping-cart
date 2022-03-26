@@ -1,5 +1,5 @@
 # Shopping Cart
-This is fictional ecommerce site owned by the grandma from [celeste](https://exok.com/games/celeste/).
+This is fictional ecommerce site owned by the grandma from [celeste](https://exok.com/games/celeste/). A live preview of the project can be seen [here](libmartinito.github.io/shopping-cart).
 
 ## Preview
 ![Website gif](preview.gif)
