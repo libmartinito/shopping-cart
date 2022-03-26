@@ -6,7 +6,7 @@ function Header({ selectedProducts }) {
   return (
     <header className="header">
       <nav className="main-nav">
-        <Link to="/shopping-cart" className="main-nav__link">
+        <Link to="/shopping-cart/" className="main-nav__link">
           <img
             src="./Images/mountain.png"
             alt="mountain icon"
